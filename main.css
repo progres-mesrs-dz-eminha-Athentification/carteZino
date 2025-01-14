@@ -1,0 +1,125 @@
+:root {
+  --primary: #FFCE00;
+  --secondary: #FE4880; 
+  --dark: #212121;
+  --light: #F3F3F3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  margin-top:6%;
+  margin-bottom: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 77%;
+  height: 504px;
+  perspective: 1000px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent; /* Remove highlight on mobile */
+}
+
+
+.card__inner.is-flipped {
+  transform: rotateY(-180deg);
+}
+
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center 0px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+  background-image: url('./front.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+
+.card__face--back {
+  background-image: url('./back.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+}
+
+/* Flip to the left */
+.flip-left {
+  transform: rotateY(-180deg);
+}
+
+/* Flip to the right */
+.flip-right {
+  transform: rotateY(180deg);
+}
+
+
+/* Style the downBar container */
+.downBar {
+  width: 85%; /* Match the card width */
+  height: 90px; /* Adjust as needed for the image height */
+  margin-top:0;
+  margin-bottom:2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the inner container and set the background image */
+.downBar_inner {
+  width: 100%;
+  height: 100%;
+  background-image: url('./downBar.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px; /* Optional: match the card's rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for effect */
+}
+
+
+.cardTitle p{
+  font-size: 24px;
+  margin-right: 20%;
+  padding-top: 1%;
+  text-align: right; /* Aligns text to the right */
+  font-family: "Cairo", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}

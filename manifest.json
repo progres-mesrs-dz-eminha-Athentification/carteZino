@@ -1,0 +1,40 @@
+{
+    "name": "webetu",
+    "short_name": "webetu",
+    "icons": [
+      {
+        "src": "./72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./108.png",
+        "sizes": "108x108",
+        "type": "image/png"
+      },
+      {
+        "src": "./145.png",
+        "sizes": "145x145",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./216.png",
+        "sizes": "216x216",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./288.png",
+        "sizes": "288x288",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "theme_color": "#f2f2f2",
+    "background_color": "#f2f2f2",
+    "start_url": "/carteZino/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
